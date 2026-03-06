@@ -1,17 +1,18 @@
 ### Analysis of all single-nucleus RNA-seq datasets
 
-system("mkdir results")
-system("mkdir results/harmony")
-
-### set working directory
-setwd("")
-
 library(Seurat)
 library(cowplot)
 library(harmony)
 library(ggplot2)
 library(reshape2)
 library(dplyr)
+
+#### set working directory
+setwd("")
+
+system("mkdir results")
+system("mkdir results/harmony")
+
 
 ctrl.data <- Read10X(data.dir = "/gale/raidix/rdx-7/trlee/10x_rna_combined/control_premrna_transcriptome_reseq/outs/filtered_feature_bc_matrix")
 ctrl_2.data <- Read10X(data.dir = "/gale/raidix/rdx-7/trlee/042919_10x_rna_ET/data/control_rna_042919_hiseq/outs/filtered_feature_bc_matrix")
@@ -305,15 +306,20 @@ seedling <- seedling %>%
     identity()
 
 
+derpy = c("#6b6b6b", "#00afed", "#294b99", "#9f3b5c", "#5f4dd4", "#edbfc4", "#e98737", "#dbcf21")
+derpy_pal = data.frame(row.names = c(0:23), cols = colorRampPalette(derpy)(n = 24))
+
+pdf("fig1C_seedling_UMAP.pdf")
+DimPlot(seedling, label=T, cols = derpy_pal[,1])
+DimPlot(seedling, label=T, cols = derpy_pal[,1], raster=TRUE)
+dev.off()
 
 pdf("results/harmony/harmony_umap.pdf")
 DimPlot(object = seedling, reduction = "umap", group.by = "stim")
-DimPlot(object = seedling, reduction = "umap", label = TRUE)
 DimPlot(object = seedling, reduction = "umap", group.by = "tissue")
 DimPlot(object = seedling, reduction = "umap", group.by = "cond")
 DimPlot(object = seedling, reduction = "umap", group.by = "geno")
 DimPlot(object = seedling, reduction = "umap", label = TRUE, split.by = "geno")
-
 
 DimPlot(object = subset(seedling, geno == "Col"), reduction = "umap", label=T) + ggtitle("Col")
 DimPlot(object = subset(seedling, geno == "hls1"), reduction = "umap", label=T) + ggtitle("hls1")
@@ -322,7 +328,6 @@ DimPlot(object = subset(seedling, tissue == "seedling"), reduction = "umap", lab
 DimPlot(object = subset(seedling, tissue == "hook"), reduction = "umap", label=T) + ggtitle("hook") + xlim(range(seedling@reductions$umap[[]][,1])) + ylim(range(seedling@reductions$umap[[]][,2]))
 DimPlot(object = subset(seedling, stim == "CTRL"), reduction = "umap", label=T) + ggtitle("Air")
 DimPlot(object = subset(seedling, stim == "ET"), reduction = "umap", label=T) + ggtitle("ET")
-
 dev.off()
 
 
@@ -353,21 +358,6 @@ DefaultAssay(seedling) <- "RNA"
 seedling <- NormalizeData(seedling, verbose = FALSE)
 seedling = ScaleData(seedling)
 
-
-pdf("results/harmony/features_top_marker.pdf")
-FeaturePlot(object = seedling, features = top1$gene[1:4], min.cutoff = "q10", max.cutoff = "q90", order=F)
-FeaturePlot(object = seedling, features = top1$gene[5:8], min.cutoff = "q10", max.cutoff = "q90", order=F)
-FeaturePlot(object = seedling, features = top1$gene[9:12], min.cutoff = "q10", max.cutoff = "q90", order=F)
-FeaturePlot(object = seedling, features = top1$gene[13:16], min.cutoff = "q10", max.cutoff = "q90", order=F)
-FeaturePlot(object = seedling, features = top1$gene[17:20], min.cutoff = "q10", max.cutoff = "q90", order=F)
-FeaturePlot(object = seedling, features = top1$gene[21:24], min.cutoff = "q10", max.cutoff = "q90", order=F)
-FeaturePlot(object = seedling, features = top1$gene[25:28], min.cutoff = "q10", max.cutoff = "q90", order=F)
-FeaturePlot(object = seedling, features = top1$gene[29:32], min.cutoff = "q10", max.cutoff = "q90", order=F)
-FeaturePlot(object = seedling, features = top1$gene[33:36], min.cutoff = "q10", max.cutoff = "q90", order=F)
-
-dev.off()
-
-
 pdf("results/harmony/dotplot_clusters.pdf")
 DotPlot(seedling, features = unique(top1$gene), dot.scale = 8,
     dot.min=.15) + RotatedAxis()
@@ -375,6 +365,60 @@ dev.off()
 
 
 saveRDS(seedling, "results/harmony/harmony.rds")
+
+
+
+##### expression of literature marker genes
+pdf("figS1_epidermis_markers.pdf")
+epi = c("AT1G68530", "AT4G21750", "AT5G57800")
+DotPlot(seedling, features=epi)
+FeaturePlot(seedling, features=epi, order=T, min.cutoff="q5", max.cutoff="q95")
+dev.off()
+
+pdf("figS1_mesophyll_markers.pdf")
+meso = c("AT1G29910", "AT5G38420", "AT2G34430", "AT3G27690")
+DotPlot(seedling, features=meso)
+FeaturePlot(seedling, features=meso, order=T, min.cutoff="q5", max.cutoff="q95")
+dev.off()
+
+pdf("figS1_xylem_markers.pdf")
+xylem = c("AT1G71930", "AT1G62700", "AT4G35350", "AT1G20850")
+FeaturePlot(seedling, features=xylem, order=T, min.cutoff="q5", max.cutoff="q95")
+dev.off()
+
+pdf("fig1_endodermis_markers.pdf")
+endodermis = c("AT5G15290", "AT3G11550", "AT2G27370", "AT1G61590")
+DotPlot(seedling, features=endodermis)
+FeaturePlot(seedling, features=endodermis, order=T, min.cutoff="q5", max.cutoff="q95")
+dev.off()
+
+pdf("fig1_root_hair_markers.pdf")
+hair = c("AT5G51060",  "AT3G51460", "AT5G19560", "AT3G03050")
+DotPlot(seedling, features=hair)
+FeaturePlot(seedling, features=hair, order=T, min.cutoff="q5", max.cutoff="q95")
+dev.off()
+
+pdf("fig1_meristem_markers.pdf")
+meristem = c("AT4G33270",  "AT4G33260", "AT4G35620", "AT1G20610")
+DotPlot(seedling, features=meristem)
+FeaturePlot(seedling, features=meristem, order=T, min.cutoff="q5", max.cutoff="q95")
+dev.off()
+
+
+pdf("fig_S2_ET_induced_examples.pdf", width=12)
+FeaturePlot(seedling, features=c("AT1G49570"), order=T, min.cutoff="q5", max.cutoff="q95", split.by="stim", cols=c("gray", "magenta"))
+FeaturePlot(seedling, features=c("AT2G47160"), order=T, min.cutoff="q5", max.cutoff="q95", split.by="stim", cols=c("gray", "magenta"))
+FeaturePlot(seedling, features=c("AT5G19890"), order=T, min.cutoff="q5", max.cutoff="q95", split.by="stim", cols=c("gray", "magenta"))
+FeaturePlot(seedling, features=c("AT1G62380"), order=T, min.cutoff="q5", max.cutoff="q95", split.by="stim", cols=c("gray", "magenta"))
+FeaturePlot(seedling, features=c("AT1G62380"), order=T, min.cutoff="q5", max.cutoff="q95", cols=c("gray", "magenta"))
+dev.off()
+
+pdf("fig_S3_roothair_ET_markers.pdf")
+FeaturePlot(seedling, features=c("AT1G66470", "AT5G19560"), order=T, min.cutoff="q5", max.cutoff="q95", split.by="stim", cols=c("gray", "magenta"))
+FeaturePlot(seedling, features=c("AT1G66470", "AT5G19560"), order=T, min.cutoff="q5", max.cutoff="q95", cols=c("gray", "magenta"))
+dev.off()
+
+
 
 
 
