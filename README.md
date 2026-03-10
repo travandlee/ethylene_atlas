@@ -10,7 +10,9 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 
 
-## Arabidopsis seedling analyses
+## Arabidopsis seedling analysei
+
+Scripts used to preprocess, cluster, and analyze the snRNA-seq datasets of whole seedlings are included below.
 
 [01_seedling_preprocessing_basic_analysis](scripts/01_seedling_preprocessing_basic_analysis.r)
 
@@ -18,13 +20,17 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 [03_apical_seedling_analysis.r](scripts/03_apical_seedling_analysis.r)
 
-## Spatial analyses
+## Spatial analysis
+
+Scripts used to preprocess, cluster, and analyze the MERFISH spatial transcripomic datasets are included below.
 
 [04_spatial_preprocessing.r](scripts/04_spatial_preprocessing.r)
 
 [05_spatial_analysis.r](scripts/05_spatial_analysis.r)
 
-## Multiome analyses
+## Multiome analysis
+
+Scripts used to preprocess and prepare the multiome datasets for integration are included below.
 
 [06_multiome_preprocessing.r](scripts/06_multiome_preprocessing.r)
 
@@ -32,9 +38,15 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 ## Spatial multi-modal analyses
 
+Scripts used to integrate the spatial and single-nucleus transcriptome and multiome datasets are included below.
+
 [08_spatial_integration_analysis.r](scripts/08_spatial_integration_analysis.r)
 
 [09_expression_imputation.r](scripts/09_expression_imputation.r)
+
+## AHR cell population analysis
+
+Scripts used to analyze the AHR cells and construct the multiomic gene regulatory network are included below.
 
 [10_AHR_subset_analysis.r](scripts/10_AHR_subset_analysis.r)
 
