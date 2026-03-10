@@ -23,7 +23,7 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 [07_multiome_integration.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/07_multiome_integration.r)
 
-##Spatial multi-modal analyses
+## Spatial multi-modal analyses
 
 [08_spatial_integration_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/08_spatial_integration_analysis.r)
 
