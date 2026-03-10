@@ -5,32 +5,30 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 ## Arabidopsis seedling analyses
 
-[01_seedling_preprocessing_basic_analysis](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/01_seedling_preprocessing_basic_analysis.r)
-
 [01_seedling_preprocessing_basic_analysis](scripts/01_seedling_preprocessing_basic_analysis.r)
 
-[02_ethylene_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/02_ethylene_analysis.r)
+[02_ethylene_analysis.r](scripts/02_ethylene_analysis.r)
 
-[03_apical_seedling_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/03_apical_seedling_analysis.r)
+[03_apical_seedling_analysis.r](scripts/03_apical_seedling_analysis.r)
 
 ## Spatial analyses
 
-[04_spatial_preprocessing.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/04_spatial_preprocessing.r)
+[04_spatial_preprocessing.r](scripts/04_spatial_preprocessing.r)
 
-[05_spatial_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/05_spatial_analysis.r)
+[05_spatial_analysis.r](scripts/05_spatial_analysis.r)
 
 ## Multiome analyses
 
-[06_multiome_preprocessing.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/06_multiome_preprocessing.r)
+[06_multiome_preprocessing.r](scripts/06_multiome_preprocessing.r)
 
-[07_multiome_integration.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/07_multiome_integration.r)
+[07_multiome_integration.r](scripts/07_multiome_integration.r)
 
 ## Spatial multi-modal analyses
 
-[08_spatial_integration_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/08_spatial_integration_analysis.r)
+[08_spatial_integration_analysis.r](scripts/08_spatial_integration_analysis.r)
 
-[09_expression_imputation.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/09_expression_imputation.r)
+[09_expression_imputation.r](scripts/09_expression_imputation.r)
 
-[10_AHR_subset_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/10_AHR_subset_analysis.r)
+[10_AHR_subset_analysis.r](scripts/10_AHR_subset_analysis.r)
 
-[11_scMEGA_GRN_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/11_scMEGA_GRN_analysis.r)
+[11_scMEGA_GRN_analysis.r](scripts/11_scMEGA_GRN_analysis.r)
