@@ -4,13 +4,14 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 [preprint link](biorxiv.org)
 
+Processed files can be found at [GEO accession # XXXXXX](https://www.ncbi.nlm.nih.gov/)
+
 <img width="1650" height="1050" alt="multimodal_integration" src="https://github.com/user-attachments/assets/731f338e-8148-41e1-b7a7-a59f2fdabb03" />
 
 ![spatial_clusters_resize](https://github.com/user-attachments/assets/5c0415de-830f-408e-95c6-065df2a159fc)
 
 
-
-## Arabidopsis seedling analysei
+## Arabidopsis seedling analysis
 
 Scripts used to preprocess, cluster, and analyze the snRNA-seq datasets of whole seedlings are included below.
 
