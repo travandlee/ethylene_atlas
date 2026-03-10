@@ -7,6 +7,8 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 [01_seedling_preprocessing_basic_analysis](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/01_seedling_preprocessing_basic_analysis.r)
 
+[01_seedling_preprocessing_basic_analysis](scripts/01_seedling_preprocessing_basic_analysis.r)
+
 [02_ethylene_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/02_ethylene_analysis.r)
 
 [03_apical_seedling_analysis.r](https://github.com/travandlee/ethylene_atlas/blob/main/scripts/03_apical_seedling_analysis.r)
