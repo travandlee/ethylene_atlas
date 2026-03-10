@@ -5,7 +5,7 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 [preprint link](biorxiv.org)
 
 
-![spatial_clusters_resize](https://github.com/user-attachments/assets/57244e01-4ab5-4422-b7d6-14c2af193115)
+![spatial_clusters_resize](https://github.com/user-attachments/assets/1987a6be-3803-4526-b8e8-bee6c8baf5f7)
 
 
 
