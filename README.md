@@ -4,7 +4,7 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 [preprint link](biorxiv.org)
 
-![spatial_clusters_collage](https://github.com/user-attachments/assets/542bc7b0-1098-4384-998e-96c5c7a36ad8)
+![spatial_clusters_resize](https://github.com/user-attachments/assets/19ed7895-3a9f-4a2d-b591-05ad4afd037f)
 
 
 ## Arabidopsis seedling analyses
