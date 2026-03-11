@@ -25,7 +25,7 @@ Scripts used to preprocess, cluster, and analyze the snRNA-seq datasets of whole
 
 Scripts used to preprocess, cluster, and analyze the MERFISH spatial transcripomic datasets are included below.
 
-Baysor was used to perform cell-segmentation. Processed cell segmented polygon files can be found at our [web resource](https://neomorph.salk.edu/tlee_public/apical_hook/
+Baysor was used to perform cell-segmentation. Processed cell segmented polygon files can be found at our [web resource](https://neomorph.salk.edu/tlee_public/apical_hook/)
 
 [04_spatial_preprocessing.r](scripts/04_spatial_preprocessing.r)
 
