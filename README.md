@@ -4,6 +4,8 @@ This repository contains scripts used in the manuscript "Spatially Defined Trans
 
 [preprint link](biorxiv.org)
 
+Browse the single-cell datasets at our web resource [https://arabidopsisdevatlas.salk.edu/](https://arabidopsisdevatlas.salk.edu/)
+
 Processed files can be found at [GEO accession # XXXXXX](https://www.ncbi.nlm.nih.gov/)
 
 <img width="1650" height="1050" alt="multimodal_integration" src="https://github.com/user-attachments/assets/731f338e-8148-41e1-b7a7-a59f2fdabb03" />
@@ -28,6 +30,7 @@ Scripts used to preprocess, cluster, and analyze the MERFISH spatial transcripom
 Baysor was used to perform cell-segmentation. Processed cell segmented polygon files can be found at our [web resource](https://neomorph.salk.edu/tlee_public/apical_hook/)
 
 Spatial analyses requires Seurat v5 for spatial dataset handling.
+
 [04_spatial_preprocessing.r](scripts/04_spatial_preprocessing.r)
 
 [05_spatial_analysis.r](scripts/05_spatial_analysis.r)
