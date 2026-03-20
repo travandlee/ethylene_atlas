@@ -27,6 +27,7 @@ Scripts used to preprocess, cluster, and analyze the MERFISH spatial transcripom
 
 Baysor was used to perform cell-segmentation. Processed cell segmented polygon files can be found at our [web resource](https://neomorph.salk.edu/tlee_public/apical_hook/)
 
+Spatial analyses requires Seurat v5 for spatial dataset handling.
 [04_spatial_preprocessing.r](scripts/04_spatial_preprocessing.r)
 
 [05_spatial_analysis.r](scripts/05_spatial_analysis.r)
@@ -42,6 +43,8 @@ Scripts used to preprocess and prepare the multiome datasets for integration are
 ## Spatial multi-modal analyses
 
 Scripts used to integrate the spatial and single-nucleus transcriptome and multiome datasets are included below.
+
+Spatial analyses requires Seurat v5 for spatial dataset handling.
 
 [08_spatial_integration_analysis.r](scripts/08_spatial_integration_analysis.r)
 
