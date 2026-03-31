@@ -1,6 +1,6 @@
 # ethylene_atlas
 
-This repository contains scripts used in the manuscript "Spatially Defined Transient Cell States Regulate Differential Growth in the Apical Hook"
+This repository contains scripts used in the manuscript " Transient cell states encode positional information to direct asymmetric growth"
 
 [preprint link](biorxiv.org)
 
