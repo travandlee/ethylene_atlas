@@ -1,6 +1,6 @@
 # ethylene_atlas
 
-This repository contains scripts used in the manuscript " Transient cell states encode positional information to direct asymmetric growth"
+This repository contains scripts used in the manuscript "Transient cell states encode positional information to direct asymmetric growth"
 
 
 Browse the single-cell datasets at our web resource [https://arabidopsisdevatlas.salk.edu/](https://arabidopsisdevatlas.salk.edu/)
