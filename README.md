@@ -6,7 +6,7 @@ This repository contains scripts used in the manuscript " Transient cell states 
 
 Browse the single-cell datasets at our web resource [https://arabidopsisdevatlas.salk.edu/](https://arabidopsisdevatlas.salk.edu/)
 
-Processed files can be found at [GEO accession # GSE326975]([https://www.ncbi.nlm.nih.gov/](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326975))
+Processed files can be found at [GEO accession # GSE326975]([https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326975])
 
 <img width="1650" height="1050" alt="multimodal_integration" src="https://github.com/user-attachments/assets/731f338e-8148-41e1-b7a7-a59f2fdabb03" />
 
