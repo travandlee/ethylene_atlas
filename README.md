@@ -3,7 +3,7 @@
 This repository contains scripts used in the manuscript "Transient cell states encode positional information to direct asymmetric growth"
 
 
-Browse the single-cell datasets at our web resource [http://arabidopsisdevatlas.salk.edu/](http://arabidopsisdevatlas.salk.edu/)
+Interactively access the single-cell datasets at our web resource [http://arabidopsisdevatlas.salk.edu/](http://arabidopsisdevatlas.salk.edu/)
 
 Processed files can be found at GEO accession #s [GSE326975](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326975), [GSE327163](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327163), and [GSE327709](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327709)
 
